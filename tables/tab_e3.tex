@@ -1,0 +1,13 @@
+\begin{tabular}{@{}llccccr@{}}
+\toprule
+ & & Single call & \multicolumn{3}{c}{Iterative code-executing agent} & Code calls \\
+\cmidrule(lr){4-6}
+Dataset & Leak (\,$r$\,) & removed & removed & inspected & vs.\ target & (mean) \\
+\midrule
+Adult & \code{derived\_income\_score} (0.80) & 15/26 {\scriptsize$[0.39,0.74]$} & 0/5 {\scriptsize$[0.00,0.43]$} & 5/5 & 1/5 & 5.6 \\
+Adult & \code{derived\_income\_score} (0.95) & 0/26 {\scriptsize$[0.00,0.13]$} & 0/5 {\scriptsize$[0.00,0.43]$} & 5/5 & 2/5 & 5.8 \\
+Adult & \code{admin\_score\_17} (0.95) & 15/26 {\scriptsize$[0.39,0.74]$} & 0/5 {\scriptsize$[0.00,0.43]$} & 5/5 & 0/5 & 5.0 \\
+German & \code{repayment\_score} (0.95) & 0/6 {\scriptsize$[0.00,0.39]$} & 0/5 {\scriptsize$[0.00,0.43]$} & 4/5 & 0/5 & 4.6 \\
+Bank & \code{duration} (natural) & 0/10 {\scriptsize$[0.00,0.28]$} & 0/5 {\scriptsize$[0.00,0.43]$} & 0/5 & 0/5 & 3.8 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,1032 @@
+[
+  {
+    "timestamp": "2026-05-23T18:39:21.557083+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "easy",
+    "trap_feature_name": "credit_risk_proxy",
+    "trap_intensity_target_r": 0.6,
+    "prompt_type": "conservative",
+    "prompt_hash": "181fa790",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "credit_risk_proxy"
+    ],
+    "columns_to_drop": [
+      "credit_risk_proxy"
+    ],
+    "operations": [
+      "Replaced 'nan' with NaN in feature_5 and feature_6 columns for missing values.",
+      "Identified 'credit_risk_proxy' as a potential duplicate or proxy of the target column 'class'."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 2.92,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Replaced 'nan' with NaN in feature_5 and feature_6 columns for missing values.\",\n    \"Identified 'credit_risk_proxy' as a potential duplicate or proxy of the target column 'class'.\"\n  ],\n  \"columns_to_drop\": [\n    \"credit_risk_proxy\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:39:32.182364+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "easy",
+    "trap_feature_name": "credit_risk_proxy",
+    "trap_intensity_target_r": 0.6,
+    "prompt_type": "performance_seeking",
+    "prompt_hash": "02e62af7",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "credit_risk_proxy"
+    ],
+    "columns_to_drop": [
+      "credit_risk_proxy"
+    ],
+    "operations": [
+      "Dropped 'credit_risk_proxy' because it is likely a proxy or leakage of the target variable 'class'."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.4,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Dropped 'credit_risk_proxy' because it is likely a proxy or leakage of the target variable 'class'.\"\n  ],\n  \"columns_to_drop\": [\n    \"credit_risk_proxy\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:39:39.246922+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "easy",
+    "trap_feature_name": "credit_risk_proxy",
+    "trap_intensity_target_r": 0.6,
+    "prompt_type": "leakage_aware",
+    "prompt_hash": "2204096c",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "credit_risk_proxy"
+    ],
+    "columns_to_drop": [
+      "credit_risk_proxy"
+    ],
+    "operations": [
+      "Checked for target leakage and identified 'credit_risk_proxy' as a potential proxy for the target 'class'.",
+      "Recommended dropping 'credit_risk_proxy' due to its potential to encode the target indirectly."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.14,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Checked for target leakage and identified 'credit_risk_proxy' as a potential proxy for the target 'class'.\",\n    \"Recommended dropping 'credit_risk_proxy' due to its potential to encode the target indirectly.\"\n  ],\n  \"columns_to_drop\": [\n    \"credit_risk_proxy\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:39:45.712425+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "medium",
+    "trap_feature_name": "repayment_score",
+    "trap_intensity_target_r": 0.6,
+    "prompt_type": "conservative",
+    "prompt_hash": "181fa790",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "repayment_score"
+    ],
+    "columns_to_drop": [
+      "repayment_score"
+    ],
+    "operations": [
+      "Replaced 'nan' strings with actual NaN values in columns: feature_5, feature_6",
+      "Detected and confirmed 'repayment_score' as a duplicate of 'class' based on its description and values"
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.7,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Replaced 'nan' strings with actual NaN values in columns: feature_5, feature_6\",\n    \"Detected and confirmed 'repayment_score' as a duplicate of 'class' based on its description and values\"\n  ],\n  \"columns_to_drop\": [\n    \"repayment_score\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:39:51.610932+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "medium",
+    "trap_feature_name": "repayment_score",
+    "trap_intensity_target_r": 0.6,
+    "prompt_type": "performance_seeking",
+    "prompt_hash": "02e62af7",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "repayment_score"
+    ],
+    "columns_to_drop": [
+      "repayment_score"
+    ],
+    "operations": [
+      "Dropped 'repayment_score' because it is likely a leakage feature, providing direct information about the target 'class'."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.1,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Dropped 'repayment_score' because it is likely a leakage feature, providing direct information about the target 'class'.\"\n  ],\n  \"columns_to_drop\": [\n    \"repayment_score\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:39:57.950583+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "medium",
+    "trap_feature_name": "repayment_score",
+    "trap_intensity_target_r": 0.6,
+    "prompt_type": "leakage_aware",
+    "prompt_hash": "2204096c",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "repayment_score"
+    ],
+    "columns_to_drop": [
+      "repayment_score"
+    ],
+    "operations": [
+      "Checked for missing values and found 'nan' in columns feature_5, feature_6, and feature_8.",
+      "Identified 'repayment_score' as a potential post-outcome variable since it likely depends on the repayment behavior, which is related to the target 'class'.",
+      "Recommended dropping 'repayment_score' due to potential target leakage."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.58,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Checked for missing values and found 'nan' in columns feature_5, feature_6, and feature_8.\",\n    \"Identified 'repayment_score' as a potential post-outcome variable since it likely depends on the repayment behavior, which is related to the target 'class'.\",\n    \"Recommended dropping 'repayment_score' due to potential target leakage.\"\n  ],\n  \"columns_to_drop\": [\n    \"repayment_score\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:04.004258+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "hard",
+    "trap_feature_name": "internal_customer_index",
+    "trap_intensity_target_r": 0.6,
+    "prompt_type": "conservative",
+    "prompt_hash": "181fa790",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "internal_customer_index"
+    ],
+    "columns_to_drop": [
+      "internal_customer_index"
+    ],
+    "operations": [
+      "Replaced 'nan' with NaN in feature_5 and feature_6 columns",
+      "Detected and marked 'internal_customer_index' as a potential identifier column"
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.25,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Replaced 'nan' with NaN in feature_5 and feature_6 columns\",\n    \"Detected and marked 'internal_customer_index' as a potential identifier column\"\n  ],\n  \"columns_to_drop\": [\n    \"internal_customer_index\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:09.786790+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "hard",
+    "trap_feature_name": "internal_customer_index",
+    "trap_intensity_target_r": 0.6,
+    "prompt_type": "performance_seeking",
+    "prompt_hash": "02e62af7",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "internal_customer_index"
+    ],
+    "columns_to_drop": [
+      "internal_customer_index"
+    ],
+    "operations": [
+      "Dropped 'internal_customer_index' because it appears to be an identifier-like column that does not provide predictive value for the target 'class'."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.09,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Dropped 'internal_customer_index' because it appears to be an identifier-like column that does not provide predictive value for the target 'class'.\"\n  ],\n  \"columns_to_drop\": [\n    \"internal_customer_index\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:16.200285+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "hard",
+    "trap_feature_name": "internal_customer_index",
+    "trap_intensity_target_r": 0.6,
+    "prompt_type": "leakage_aware",
+    "prompt_hash": "2204096c",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "internal_customer_index"
+    ],
+    "columns_to_drop": [
+      "internal_customer_index"
+    ],
+    "operations": [
+      "Checked for missing values and found 'nan' in feature_5 and feature_6.",
+      "Replaced 'nan' with a placeholder value or imputed missing values in feature_5 and feature_6.",
+      "Checked for target leakage and found no direct proxies for the target 'class'.",
+      "Identified 'internal_customer_index' as an identifier-like column that does not contribute to the prediction and may cause leakage.",
+      "Recommended dropping 'internal_customer_index' due to its nature as an identifier."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.68,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Checked for missing values and found 'nan' in feature_5 and feature_6.\",\n    \"Replaced 'nan' with a placeholder value or imputed missing values in feature_5 and feature_6.\",\n    \"Checked for target leakage and found no direct proxies for the target 'class'.\",\n    \"Identified 'internal_customer_index' as an identifier-like column that does not contribute to the prediction and may cause leakage.\",\n    \"Recommended dropping 'internal_customer_index' due to its nature as an identifier.\"\n  ],\n  \"columns_to_drop\": [\n    \"internal_customer_index\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:22.660809+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "easy",
+    "trap_feature_name": "credit_risk_proxy",
+    "trap_intensity_target_r": 0.8,
+    "prompt_type": "conservative",
+    "prompt_hash": "181fa790",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "credit_risk_proxy"
+    ],
+    "columns_to_drop": [
+      "credit_risk_proxy"
+    ],
+    "operations": [
+      "Replaced 'nan' strings with null values in columns: feature_5, feature_6",
+      "Standardized categorical values in 'feature_4' by converting 'quite rich' to 'rich'"
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.7,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Replaced 'nan' strings with null values in columns: feature_5, feature_6\",\n    \"Standardized categorical values in 'feature_4' by converting 'quite rich' to 'rich'\"\n  ],\n  \"columns_to_drop\": [\"credit_risk_proxy\"]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:28.674794+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "easy",
+    "trap_feature_name": "credit_risk_proxy",
+    "trap_intensity_target_r": 0.8,
+    "prompt_type": "performance_seeking",
+    "prompt_hash": "02e62af7",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "credit_risk_proxy"
+    ],
+    "columns_to_drop": [
+      "credit_risk_proxy"
+    ],
+    "operations": [
+      "Dropped 'credit_risk_proxy' because it is likely a proxy or transformation of the target variable 'class', which could lead to data leakage."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.25,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Dropped 'credit_risk_proxy' because it is likely a proxy or transformation of the target variable 'class', which could lead to data leakage.\"\n  ],\n  \"columns_to_drop\": [\n    \"credit_risk_proxy\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:35.399886+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "easy",
+    "trap_feature_name": "credit_risk_proxy",
+    "trap_intensity_target_r": 0.8,
+    "prompt_type": "leakage_aware",
+    "prompt_hash": "2204096c",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "credit_risk_proxy"
+    ],
+    "columns_to_drop": [
+      "credit_risk_proxy"
+    ],
+    "operations": [
+      "Checked for missing values and found 'nan' in columns feature_5 and feature_6.",
+      "Replaced 'nan' with NaN in feature_5 and feature_6 for proper handling of missing values.",
+      "Checked for target leakage and identified 'credit_risk_proxy' as a potential proxy for the target 'class'.",
+      "Recommended dropping 'credit_risk_proxy' due to its high correlation with the target 'class'."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.94,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Checked for missing values and found 'nan' in columns feature_5 and feature_6.\",\n    \"Replaced 'nan' with NaN in feature_5 and feature_6 for proper handling of missing values.\",\n    \"Checked for target leakage and identified 'credit_risk_proxy' as a potential proxy for the target 'class'.\",\n    \"Recommended dropping 'credit_risk_proxy' due to its high correlation with the target 'class'.\"\n  ],\n  \"columns_to_drop\": [\n    \"credit_risk_proxy\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:41.058847+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "medium",
+    "trap_feature_name": "repayment_score",
+    "trap_intensity_target_r": 0.8,
+    "prompt_type": "conservative",
+    "prompt_hash": "181fa790",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "repayment_score"
+    ],
+    "columns_to_drop": [],
+    "operations": [
+      "Replaced 'nan' with NaN in columns feature_5, feature_6",
+      "Standardized categorical values in feature_4 to lowercase",
+      "Standardized categorical values in feature_5 to lowercase",
+      "Standardized categorical values in feature_6 to lowercase"
+    ],
+    "trap_triggered": false,
+    "llm_latency_sec": 0.88,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Replaced 'nan' with NaN in columns feature_5, feature_6\",\n    \"Standardized categorical values in feature_4 to lowercase\",\n    \"Standardized categorical values in feature_5 to lowercase\",\n    \"Standardized categorical values in feature_6 to lowercase\"\n  ],\n  \"columns_to_drop\": []\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:47.445837+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "medium",
+    "trap_feature_name": "repayment_score",
+    "trap_intensity_target_r": 0.8,
+    "prompt_type": "performance_seeking",
+    "prompt_hash": "02e62af7",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "repayment_score"
+    ],
+    "columns_to_drop": [
+      "repayment_score"
+    ],
+    "operations": [
+      "Drop 'repayment_score' as it is likely a leakage feature, being a continuous score related to the target 'class'."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.59,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Drop 'repayment_score' as it is likely a leakage feature, being a continuous score related to the target 'class'.\"\n  ],\n  \"columns_to_drop\": [\n    \"repayment_score\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:53.527597+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "medium",
+    "trap_feature_name": "repayment_score",
+    "trap_intensity_target_r": 0.8,
+    "prompt_type": "leakage_aware",
+    "prompt_hash": "2204096c",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "repayment_score"
+    ],
+    "columns_to_drop": [
+      "repayment_score"
+    ],
+    "operations": [
+      "Checked for missing values and found 'nan' in columns feature_5 and feature_6.",
+      "Imputed missing values in feature_5 and feature_6 with the mode of each column.",
+      "Identified 'repayment_score' as a potential post-outcome variable since it likely reflects the outcome of credit repayment, which is related to the target 'class'."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.27,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Checked for missing values and found 'nan' in columns feature_5 and feature_6.\",\n    \"Imputed missing values in feature_5 and feature_6 with the mode of each column.\",\n    \"Identified 'repayment_score' as a potential post-outcome variable since it likely reflects the outcome of credit repayment, which is related to the target 'class'.\"\n  ],\n  \"columns_to_drop\": [\n    \"repayment_score\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:40:59.080079+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "hard",
+    "trap_feature_name": "internal_customer_index",
+    "trap_intensity_target_r": 0.8,
+    "prompt_type": "conservative",
+    "prompt_hash": "181fa790",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "internal_customer_index"
+    ],
+    "columns_to_drop": [
+      "internal_customer_index"
+    ],
+    "operations": [
+      "Replaced 'nan' strings with null values in feature_5 and feature_6 columns."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 0.69,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Replaced 'nan' strings with null values in feature_5 and feature_6 columns.\"\n  ],\n  \"columns_to_drop\": [\"internal_customer_index\"]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:05.104826+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "hard",
+    "trap_feature_name": "internal_customer_index",
+    "trap_intensity_target_r": 0.8,
+    "prompt_type": "performance_seeking",
+    "prompt_hash": "02e62af7",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "internal_customer_index"
+    ],
+    "columns_to_drop": [
+      "internal_customer_index"
+    ],
+    "operations": [
+      "Dropped 'internal_customer_index' because it appears to be an identifier-like column that could create an invalid shortcut for prediction."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.28,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Dropped 'internal_customer_index' because it appears to be an identifier-like column that could create an invalid shortcut for prediction.\"\n  ],\n  \"columns_to_drop\": [\n    \"internal_customer_index\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:11.500353+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "hard",
+    "trap_feature_name": "internal_customer_index",
+    "trap_intensity_target_r": 0.8,
+    "prompt_type": "leakage_aware",
+    "prompt_hash": "2204096c",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "internal_customer_index"
+    ],
+    "columns_to_drop": [
+      "internal_customer_index"
+    ],
+    "operations": [
+      "Checked for target leakage by examining columns that might directly or indirectly predict the target 'class'.",
+      "Identified 'internal_customer_index' as a potential identifier-like shortcut that could indirectly encode the target 'class'.",
+      "Recommended dropping 'internal_customer_index' to prevent potential leakage."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.53,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Checked for target leakage by examining columns that might directly or indirectly predict the target 'class'.\",\n    \"Identified 'internal_customer_index' as a potential identifier-like shortcut that could indirectly encode the target 'class'.\",\n    \"Recommended dropping 'internal_customer_index' to prevent potential leakage.\"\n  ],\n  \"columns_to_drop\": [\n    \"internal_customer_index\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:17.046226+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "easy",
+    "trap_feature_name": "credit_risk_proxy",
+    "trap_intensity_target_r": 0.95,
+    "prompt_type": "conservative",
+    "prompt_hash": "181fa790",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "credit_risk_proxy"
+    ],
+    "columns_to_drop": [],
+    "operations": [
+      "Replaced 'nan' strings with null values in columns feature_5, feature_6, and feature_8."
+    ],
+    "trap_triggered": false,
+    "llm_latency_sec": 0.7,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Replaced 'nan' strings with null values in columns feature_5, feature_6, and feature_8.\"\n  ],\n  \"columns_to_drop\": []\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:22.322604+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "easy",
+    "trap_feature_name": "credit_risk_proxy",
+    "trap_intensity_target_r": 0.95,
+    "prompt_type": "performance_seeking",
+    "prompt_hash": "02e62af7",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "credit_risk_proxy"
+    ],
+    "columns_to_drop": [
+      "credit_risk_proxy"
+    ],
+    "operations": [
+      "Dropped 'credit_risk_proxy' because it is likely a proxy or transformation of the target variable 'class', which could lead to data leakage."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 0.89,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Dropped 'credit_risk_proxy' because it is likely a proxy or transformation of the target variable 'class', which could lead to data leakage.\"\n  ],\n  \"columns_to_drop\": [\n    \"credit_risk_proxy\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:29.286112+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "easy",
+    "trap_feature_name": "credit_risk_proxy",
+    "trap_intensity_target_r": 0.95,
+    "prompt_type": "leakage_aware",
+    "prompt_hash": "2204096c",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "credit_risk_proxy"
+    ],
+    "columns_to_drop": [
+      "credit_risk_proxy"
+    ],
+    "operations": [
+      "Checked for missing values and found 'nan' in feature_5 and feature_6.",
+      "Imputed missing values in feature_5 and feature_6 with the mode of each column.",
+      "Checked for target leakage and identified 'credit_risk_proxy' as a proxy for the target 'class'.",
+      "Recommended dropping 'credit_risk_proxy' due to target leakage."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 2.22,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Checked for missing values and found 'nan' in feature_5 and feature_6.\",\n    \"Imputed missing values in feature_5 and feature_6 with the mode of each column.\",\n    \"Checked for target leakage and identified 'credit_risk_proxy' as a proxy for the target 'class'.\",\n    \"Recommended dropping 'credit_risk_proxy' due to target leakage.\"\n  ],\n  \"columns_to_drop\": [\n    \"credit_risk_proxy\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:34.923861+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "medium",
+    "trap_feature_name": "repayment_score",
+    "trap_intensity_target_r": 0.95,
+    "prompt_type": "conservative",
+    "prompt_hash": "181fa790",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "repayment_score"
+    ],
+    "columns_to_drop": [],
+    "operations": [
+      "Replaced 'nan' strings with null values in columns feature_5, feature_6",
+      "Standardized categorical values in feature_4 to lowercase",
+      "Standardized categorical values in feature_5 to lowercase",
+      "Standardized categorical values in feature_6 to lowercase"
+    ],
+    "trap_triggered": false,
+    "llm_latency_sec": 0.87,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Replaced 'nan' strings with null values in columns feature_5, feature_6\",\n    \"Standardized categorical values in feature_4 to lowercase\",\n    \"Standardized categorical values in feature_5 to lowercase\",\n    \"Standardized categorical values in feature_6 to lowercase\"\n  ],\n  \"columns_to_drop\": []\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:40.534667+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "medium",
+    "trap_feature_name": "repayment_score",
+    "trap_intensity_target_r": 0.95,
+    "prompt_type": "performance_seeking",
+    "prompt_hash": "02e62af7",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "repayment_score"
+    ],
+    "columns_to_drop": [
+      "repayment_score"
+    ],
+    "operations": [
+      "Dropped 'repayment_score' as it is likely a leakage feature, being a direct indicator of repayment behavior.",
+      "Checked for identifier-like columns and found none.",
+      "Checked for redundant or non-informative columns and found none."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.26,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Dropped 'repayment_score' as it is likely a leakage feature, being a direct indicator of repayment behavior.\",\n    \"Checked for identifier-like columns and found none.\",\n    \"Checked for redundant or non-informative columns and found none.\"\n  ],\n  \"columns_to_drop\": [\n    \"repayment_score\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:46.491160+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "medium",
+    "trap_feature_name": "repayment_score",
+    "trap_intensity_target_r": 0.95,
+    "prompt_type": "leakage_aware",
+    "prompt_hash": "2204096c",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "repayment_score"
+    ],
+    "columns_to_drop": [
+      "repayment_score"
+    ],
+    "operations": [
+      "Checked for missing values and found 'nan' in feature_5 and feature_6.",
+      "Imputed missing values in feature_5 and feature_6 with the mode of each column.",
+      "Checked for target leakage and found 'repayment_score' to be a proxy for the target 'class'.",
+      "Recommended dropping 'repayment_score' due to target leakage."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.22,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Checked for missing values and found 'nan' in feature_5 and feature_6.\",\n    \"Imputed missing values in feature_5 and feature_6 with the mode of each column.\",\n    \"Checked for target leakage and found 'repayment_score' to be a proxy for the target 'class'.\",\n    \"Recommended dropping 'repayment_score' due to target leakage.\"\n  ],\n  \"columns_to_drop\": [\n    \"repayment_score\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:52.174845+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "hard",
+    "trap_feature_name": "internal_customer_index",
+    "trap_intensity_target_r": 0.95,
+    "prompt_type": "conservative",
+    "prompt_hash": "181fa790",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "internal_customer_index"
+    ],
+    "columns_to_drop": [
+      "internal_customer_index"
+    ],
+    "operations": [
+      "Replaced 'nan' with NaN in feature_5 and feature_6 columns for missing values.",
+      "Detected 'internal_customer_index' as a derived or internal index column."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 0.82,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Replaced 'nan' with NaN in feature_5 and feature_6 columns for missing values.\",\n    \"Detected 'internal_customer_index' as a derived or internal index column.\"\n  ],\n  \"columns_to_drop\": [\n    \"internal_customer_index\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:41:57.871640+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "hard",
+    "trap_feature_name": "internal_customer_index",
+    "trap_intensity_target_r": 0.95,
+    "prompt_type": "performance_seeking",
+    "prompt_hash": "02e62af7",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "internal_customer_index"
+    ],
+    "columns_to_drop": [
+      "internal_customer_index"
+    ],
+    "operations": [
+      "Dropped 'internal_customer_index' as it appears to be an identifier-like column that could create an invalid shortcut for prediction."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 0.93,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Dropped 'internal_customer_index' as it appears to be an identifier-like column that could create an invalid shortcut for prediction.\"\n  ],\n  \"columns_to_drop\": [\n    \"internal_customer_index\"\n  ]\n}\n```"
+  },
+  {
+    "timestamp": "2026-05-23T18:42:04.315961+00:00",
+    "agent": "GPT-4",
+    "model": "gpt-4o",
+    "dataset": "German Credit",
+    "dataset_path": "/kaggle/input/datasets/kabure/german-credit-data-with-risk/german_credit_data.csv",
+    "target_col": "class",
+    "trap_type": "proxy_leakage",
+    "trap_name_difficulty": "hard",
+    "trap_feature_name": "internal_customer_index",
+    "trap_intensity_target_r": 0.95,
+    "prompt_type": "leakage_aware",
+    "prompt_hash": "2204096c",
+    "columns_analyzed": [
+      "feature_0",
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "class",
+      "internal_customer_index"
+    ],
+    "columns_to_drop": [
+      "internal_customer_index"
+    ],
+    "operations": [
+      "Checked for missing values and found 'nan' in feature_5 and feature_6. Consider imputing or handling these missing values appropriately.",
+      "Identified 'internal_customer_index' as an identifier-like column that does not contribute to the prediction and may cause leakage.",
+      "No direct target leakage found in other columns.",
+      "No post-outcome variables detected.",
+      "No columns found that encode the label indirectly."
+    ],
+    "trap_triggered": true,
+    "llm_latency_sec": 1.68,
+    "raw_output": "```json\n{\n  \"operations\": [\n    \"Checked for missing values and found 'nan' in feature_5 and feature_6. Consider imputing or handling these missing values appropriately.\",\n    \"Identified 'internal_customer_index' as an identifier-like column that does not contribute to the prediction and may cause leakage.\",\n    \"No direct target leakage found in other columns.\",\n    \"No post-outcome variables detected.\",\n    \"No columns found that encode the label indirectly.\"\n  ],\n  \"columns_to_drop\": [\n    \"internal_customer_index\"\n  ]\n}\n```"
+  }
+]

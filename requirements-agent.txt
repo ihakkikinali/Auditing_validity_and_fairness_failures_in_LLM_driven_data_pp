@@ -1,0 +1,3 @@
+# Optional: only needed to re-run the agent calls (agent_runs/run_new_agent_experiments.py)
+-r requirements.txt
+openai>=1.0

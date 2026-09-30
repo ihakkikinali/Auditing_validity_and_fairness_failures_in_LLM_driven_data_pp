@@ -1,0 +1,194 @@
+{
+ "E1": {
+  "fam": {
+   "conservative": {
+    "k": 0,
+    "n": 10,
+    "other_drops": 0.0,
+    "dep_f1_r": 0.6334571190225963,
+    "dvg_f1_r": 0.12189492208136028,
+    "dep_f1_t": 0.42232970704739864,
+    "dvg_f1_t": 0.1512471662175517
+   },
+   "performance_seeking": {
+    "k": 7,
+    "n": 10,
+    "other_drops": 4.5,
+    "dep_f1_r": 0.6156251021402095,
+    "dvg_f1_r": 0.04936038735872346,
+    "dep_f1_t": 0.4137591260370638,
+    "dvg_f1_t": 0.07888226949389111
+   },
+   "leakage_aware": {
+    "k": 10,
+    "n": 10,
+    "other_drops": 1.1,
+    "dep_f1_r": 0.6477364415467625,
+    "dvg_f1_r": 0.008963833101221015,
+    "dep_f1_t": 0.42765497096671734,
+    "dvg_f1_t": 0.04340311438473586
+   }
+  },
+  "ref": {
+   "dep_f1_r": 0.6508091367023594,
+   "dvg_f1_r": 0.00898213208317758,
+   "dep_f1_t": 0.430644079237325,
+   "dvg_f1_t": 0.04060216611397978
+  },
+  "target_dropped": 1
+ },
+ "E2": {
+  "easy_0.6": [
+   0,
+   1
+  ],
+  "easy_0.8": [
+   0,
+   1
+  ],
+  "easy_0.95": [
+   4,
+   6
+  ],
+  "medium_0.6": [
+   0,
+   1
+  ],
+  "medium_0.8": [
+   0,
+   6
+  ],
+  "medium_0.95": [
+   0,
+   6
+  ],
+  "hard_0.6": [
+   1,
+   1
+  ],
+  "hard_0.8": [
+   1,
+   1
+  ],
+  "hard_0.95": [
+   5,
+   6
+  ],
+  "medium_total": [
+   0,
+   13
+  ],
+  "hard_total": [
+   7,
+   8
+  ],
+  "mentions_leak_hard": 0
+ },
+ "E3": {
+  "Adult|derived_income_score|0.8": {
+   "k": 0,
+   "n": 5,
+   "inspected": 5,
+   "relation": 1,
+   "calls": 5.6,
+   "single": [
+    15,
+    26
+   ]
+  },
+  "Adult|derived_income_score|0.95": {
+   "k": 0,
+   "n": 5,
+   "inspected": 5,
+   "relation": 2,
+   "calls": 5.8,
+   "single": [
+    0,
+    26
+   ]
+  },
+  "Adult|admin_score_17|0.95": {
+   "k": 0,
+   "n": 5,
+   "inspected": 5,
+   "relation": 0,
+   "calls": 5.0,
+   "single": [
+    15,
+    26
+   ]
+  },
+  "German|repayment_score|0.95": {
+   "k": 0,
+   "n": 5,
+   "inspected": 4,
+   "relation": 0,
+   "calls": 4.6,
+   "single": [
+    0,
+    6
+   ]
+  },
+  "Bank|duration|None": {
+   "k": 0,
+   "n": 5,
+   "inspected": 0,
+   "relation": 0,
+   "calls": 3.8,
+   "single": [
+    0,
+    10
+   ]
+  }
+ },
+ "E4": {
+  "medium_0.8": {
+   "profiled": [
+    1,
+    5,
+    0
+   ],
+   "profiled_notice": [
+    5,
+    5,
+    0
+   ]
+  },
+  "medium_0.95": {
+   "profiled": [
+    5,
+    5,
+    0
+   ],
+   "profiled_notice": [
+    5,
+    5,
+    0
+   ]
+  },
+  "hard_0.8": {
+   "profiled": [
+    0,
+    5,
+    0
+   ],
+   "profiled_notice": [
+    0,
+    5,
+    1
+   ]
+  },
+  "hard_0.95": {
+   "profiled": [
+    3,
+    5,
+    2
+   ],
+   "profiled_notice": [
+    0,
+    5,
+    5
+   ]
+  }
+ }
+}

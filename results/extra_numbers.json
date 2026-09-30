@@ -1,0 +1,149 @@
+{
+ "CUR_bank": [
+  {
+   "prompt": "conservative",
+   "cur_random_mean": 0.01735201767976306,
+   "cur_random_min": 0.01236095373365298,
+   "cur_random_max": 0.02038528490216507,
+   "cur_temporal": 0.008314372189926422,
+   "share_calls_cur_gt_001": 1.0
+  },
+  {
+   "prompt": "performance_seeking",
+   "cur_random_mean": 0.03518403456214988,
+   "cur_random_min": 0.029171860463218246,
+   "cur_random_max": 0.04680884158381223,
+   "cur_temporal": 0.016884953200261215,
+   "share_calls_cur_gt_001": 1.0
+  },
+  {
+   "prompt": "leakage_aware",
+   "cur_random_mean": 0.0030726951555968642,
+   "cur_random_min": -0.000508332584658544,
+   "cur_random_max": 0.0050848643831653325,
+   "cur_temporal": 0.0029891082706077045,
+   "share_calls_cur_gt_001": 0.1
+  }
+ ],
+ "screens": {
+  "Adult Income": {
+   "n": 14,
+   "r": 4,
+   "mi": 11,
+   "either": 11,
+   "names": [
+    "age",
+    "fnlwgt",
+    "education",
+    "education.num",
+    "marital.status",
+    "occupation",
+    "relationship",
+    "sex",
+    "capital.gain",
+    "capital.loss",
+    "hours.per.week"
+   ]
+  },
+  "German Credit": {
+   "n": 9,
+   "r": 1,
+   "mi": 2,
+   "either": 2,
+   "names": [
+    "Checking_account",
+    "Duration"
+   ]
+  },
+  "Bank Marketing": {
+   "n": 19,
+   "r": 5,
+   "mi": 8,
+   "either": 9,
+   "names": [
+    "month",
+    "pdays",
+    "previous",
+    "poutcome",
+    "emp.var.rate",
+    "cons.price.idx",
+    "cons.conf.idx",
+    "euribor3m",
+    "nr.employed"
+   ]
+  }
+ },
+ "parse": {
+  "pilot_logs.json": {
+   "n": 2,
+   "unparseable_from_stored": 0,
+   "stored_output_truncated": 0
+  },
+  "stage3b_agent_logs.json": {
+   "n": 27,
+   "unparseable_from_stored": 0,
+   "stored_output_truncated": 0
+  },
+  "stage3a_agent_logs.json": {
+   "n": 27,
+   "unparseable_from_stored": 0,
+   "stored_output_truncated": 0
+  },
+  "stage3a_1_repeatability_logs.json": {
+   "n": 20,
+   "unparseable_from_stored": 0,
+   "stored_output_truncated": 0
+  },
+  "stage2_agent_logs.json": {
+   "n": 27,
+   "unparseable_from_stored": 0,
+   "stored_output_truncated": 0
+  },
+  "stage1_agent_logs.json": {
+   "n": 9,
+   "unparseable_from_stored": 0,
+   "stored_output_truncated": 0
+  },
+  "stage3b_1_repeatability_logs.json": {
+   "n": 20,
+   "unparseable_from_stored": 0,
+   "stored_output_truncated": 0
+  },
+  "stage2_1_repeatability_logs.json": {
+   "n": 30,
+   "unparseable_from_stored": 0,
+   "stored_output_truncated": 0
+  },
+  "agent_level_new": {
+   "n": 167,
+   "unparseable": 0
+  }
+ },
+ "dp": {
+  "protected_positive_0.25": {
+   "d_dp": 0.013007588148200919,
+   "lo": 0.0087733575975434,
+   "hi": 0.015336634078336017
+  },
+  "protected_positive_0.5": {
+   "d_dp": 0.02762756168811938,
+   "lo": 0.022131721582374485,
+   "hi": 0.03328229911600117
+  },
+  "protected_positive_0.75": {
+   "d_dp": 0.04605133132012247,
+   "lo": 0.040905457797735696,
+   "hi": 0.05108649416716162
+  },
+  "random_positive_0.75": {
+   "d_dp": -0.011761656918352976,
+   "lo": -0.015018470256499118,
+   "hi": -0.007723422686647233
+  },
+  "unprotected_positive_0.75": {
+   "d_dp": -0.019756586385817617,
+   "lo": -0.022720870848209406,
+   "hi": -0.016875386173459843
+  }
+ }
+}

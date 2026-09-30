@@ -1,0 +1,80 @@
+# =====================================================
+# Python cache
+# =====================================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# =====================================================
+# Virtual environments
+# =====================================================
+.venv/
+venv/
+env/
+
+# =====================================================
+# IDE / OS
+# =====================================================
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =====================================================
+# Local logs / temporary files
+# =====================================================
+*.log
+*.tmp
+*.temp
+
+# =====================================================
+# Compressed archives / very large local packages
+# =====================================================
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# =====================================================
+# Large model/checkpoint/binary files
+# Bunları gerçekten paylaşacaksan Git LFS veya Zenodo kullan.
+# =====================================================
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.mat
+
+# =====================================================
+# Local-only raw folders
+# Reproducibility için data/ ve results/ KESİNLİKLE ignore edilmez.
+# =====================================================
+raw_data/
+large_data/
+private_data/
+local_data/
+checkpoints/
+models/
+weights/
+runs/
+logs/
+
+# =====================================================
+# Secrets
+# =====================================================
+.env
+*token*
+*.pem
+*.key
+github_repo_yukle.py

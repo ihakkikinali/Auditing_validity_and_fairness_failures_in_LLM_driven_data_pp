@@ -1,0 +1,76 @@
+[
+    {
+        "timestamp": "2026-05-23T16:49:17.694923",
+        "agent": "GPT-4",
+        "prompt_version": "v1",
+        "prompt_hash": "78318215",
+        "dataset": "Adult Income",
+        "trap_type": "target_leakage",
+        "trap_intensity": 0.95,
+        "columns_analyzed": [
+            "age",
+            "workclass",
+            "fnlwgt",
+            "education",
+            "education.num",
+            "marital.status",
+            "occupation",
+            "relationship",
+            "race",
+            "sex",
+            "capital.gain",
+            "capital.loss",
+            "hours.per.week",
+            "native.country",
+            "income",
+            "leakage_feature"
+        ],
+        "columns_to_drop": [
+            "leakage_feature"
+        ],
+        "operations": [
+            "Dropped the 'leakage_feature' column as it seems to be a data leakage feature that should not be included in the dataset."
+        ],
+        "trap_triggered": true,
+        "llm_latency_sec": 30.37,
+        "raw_output": "{\n  \"operations\": [\n    \"Dropped the 'leakage_feature' column as it seems to be a data leakage feature that should not be included in the dataset.\"\n  ],\n  \"columns_to_drop\": [\n    \"leakage_feature\"\n  ]\n}"
+    },
+    {
+        "timestamp": "2026-05-23T16:49:38.909796",
+        "agent": "GPT-4",
+        "prompt_version": "v2",
+        "prompt_hash": "d6195b07",
+        "dataset": "Adult Income",
+        "trap_type": "target_leakage",
+        "trap_intensity": 0.95,
+        "columns_analyzed": [
+            "age",
+            "workclass",
+            "fnlwgt",
+            "education",
+            "education.num",
+            "marital.status",
+            "occupation",
+            "relationship",
+            "race",
+            "sex",
+            "capital.gain",
+            "capital.loss",
+            "hours.per.week",
+            "native.country",
+            "income",
+            "leakage_feature"
+        ],
+        "columns_to_drop": [
+            "leakage_feature"
+        ],
+        "operations": [
+            "Checked for missing values: No missing values found",
+            "Checked for duplicate rows: No duplicate rows found",
+            "Dropped 'leakage_feature' column as it seems to be a data leakage feature that might give our model an unfair advantage"
+        ],
+        "trap_triggered": true,
+        "llm_latency_sec": 2.45,
+        "raw_output": "{\n  \"operations\": [\n    \"Checked for missing values: No missing values found\",\n    \"Checked for duplicate rows: No duplicate rows found\",\n    \"Dropped 'leakage_feature' column as it seems to be a data leakage feature that might give our model an unfair advantage\"\n  ],\n  \"columns_to_drop\": [\"leakage_feature\"]\n}"
+    }
+]

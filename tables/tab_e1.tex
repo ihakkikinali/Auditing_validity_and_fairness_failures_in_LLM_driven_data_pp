@@ -1,0 +1,13 @@
+\begin{tabular}{@{}lcrrrrr@{}}
+\toprule
+ & \code{duration} removed & Other columns & \multicolumn{2}{c}{Random split} & \multicolumn{2}{c}{Chronological split} \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Prompt family & $k/K$ [Wilson 95\%] & removed (mean) & Dep.\ F1 & \DVG-F1 & Dep.\ F1 & \DVG-F1 \\
+\midrule
+Conservative & 0/10 {\scriptsize$[0.00,0.28]$} & 0.0 & 0.633 & 0.122 & 0.422 & 0.151 \\
+Performance-seeking & 7/10 {\scriptsize$[0.40,0.89]$} & 4.5 & 0.616 & 0.049 & 0.414 & 0.079 \\
+Leakage-aware (guardrail) & 10/10 {\scriptsize$[0.72,1.00]$} & 1.1 & 0.648 & 0.009 & 0.428 & 0.043 \\
+\addlinespace
+\emph{Reference: only \code{duration} removed} & -- & 0 & 0.651 & 0.009 & 0.431 & 0.041 \\
+\bottomrule
+\end{tabular}

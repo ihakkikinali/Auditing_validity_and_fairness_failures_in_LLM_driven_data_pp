@@ -1,0 +1,14 @@
+{
+ "model": "gpt-4o",
+ "temperature": 0,
+ "seed": 42,
+ "experiments": [
+  "E1",
+  "E2",
+  "E3",
+  "E4"
+ ],
+ "mock": false,
+ "started": "2026-09-30T09:07:39.031013+00:00",
+ "pandas": "2.3.3"
+}
